@@ -5,10 +5,15 @@ import { AppProvider } from "@/context/AppContext";
 export const metadata: Metadata = {
   title: "1Fi - Shop & Pay Later with Mutual Funds",
   description: "Shop at 0% No-cost EMI backed by your Mutual Funds",
+  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
     title: "1Fi",
+  },
+  icons: {
+    icon: "/icons/icon-192.svg",
+    apple: "/icons/icon-192.svg",
   },
 };
 
@@ -28,6 +33,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full bg-fi-bg">
+      <head>
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="icon" href="/icons/icon-192.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+      </head>
       <body className="antialiased select-none bg-fi-bg min-h-full text-slate-900 overflow-x-hidden">
         <AppProvider>{children}</AppProvider>
       </body>

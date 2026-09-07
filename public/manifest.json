@@ -1,0 +1,25 @@
+{
+  "name": "1Fi - Shop & Pay Later with Mutual Funds",
+  "short_name": "1Fi",
+  "description": "Shop at 0% No-cost EMI backed by your Mutual Funds",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FD",
+  "theme_color": "#0F144B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "finance", "business"]
+}

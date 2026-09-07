@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F144B" />
+      <stop offset="50%" stop-color="#2E1065" />
+      <stop offset="100%" stop-color="#6C38FF" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#fiGrad)" />
+  <g transform="translate(96, 108)">
+    <text x="0" y="0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="64" text-anchor="middle" letter-spacing="-2">1Fi</text>
+  </g>
+  <circle cx="140" cy="52" r="8" fill="#10B981" />
+</svg>
