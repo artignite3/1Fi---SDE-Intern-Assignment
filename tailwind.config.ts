@@ -10,36 +10,46 @@ const config: Config = {
     extend: {
       colors: {
         fi: {
-          purple: "#6C38FF",
-          "purple-hover": "#5826E2",
-          "purple-dark": "#3B1895",
-          "purple-light": "#F2ECFF",
-          "purple-soft": "#FAF7FF",
-          bg: "#F8F9FD",
+          purple: "#5C24EB", // Vibrant 1Fi signature purple
+          "purple-hover": "#4E1BD6",
+          "purple-dark": "#2B0B80",
+          "purple-light": "#F2EEFD", // Soft violet pill background
+          "purple-soft": "#FAF8FF",
+          bg: "#F8F9FA", // Clean off-white background
           surface: "#FFFFFF",
-          text: "#12141A",
-          muted: "#6B7280",
-          border: "#EBEFFA",
-          tag: "#EFEBFF",
-          green: "#00BA88",
+          text: "#181A20", // Deep dark charcoal
+          muted: "#80869A", // Soft secondary text
+          border: "#F1F3F9", // Crisp 1px card border
+          tag: "#F2EEFD",
+          green: "#00BA88", // 1Fi verified green
           "green-light": "#E8FBF4",
           orange: "#FF8C38",
           yellow: "#FBBF24",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "-apple-system", "sans-serif"],
+        sans: [
+          "var(--font-plus-jakarta)",
+          "var(--font-inter)",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
       },
       boxShadow: {
-        fi: "0px 4px 20px rgba(0, 0, 0, 0.05)",
-        "fi-card": "0px 2px 12px rgba(108, 56, 255, 0.06)",
-        "fi-hover": "0px 8px 30px rgba(108, 56, 255, 0.12)",
-        "fi-btn": "0px 6px 20px rgba(108, 56, 255, 0.35)",
-        "fi-subtle": "0px 1px 4px rgba(0, 0, 0, 0.04)",
+        fi: "0px 4px 20px rgba(0, 0, 0, 0.04)",
+        "fi-card": "0px 2px 8px rgba(0, 0, 0, 0.03)",
+        "fi-hover": "0px 8px 24px rgba(92, 36, 235, 0.12)",
+        "fi-btn": "0px 4px 14px rgba(92, 36, 235, 0.35)",
+        "fi-subtle": "0px 1px 3px rgba(0, 0, 0, 0.03)",
       },
       borderRadius: {
-        "3xl": "1.5rem",
-        "4xl": "2rem",
+        "xl": "12px",
+        "2xl": "16px",
+        "3xl": "22px",
+        "4xl": "28px",
       },
       animation: {
         "pulse-slow": "pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite",

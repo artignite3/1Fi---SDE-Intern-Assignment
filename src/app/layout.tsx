@@ -1,6 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/context/AppContext";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "1Fi - Shop & Pay Later with Mutual Funds",
@@ -32,7 +47,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full bg-fi-bg">
+    <html
+      lang="en"
+      className={`h-full bg-fi-bg ${plusJakartaSans.variable} ${inter.variable}`}
+    >
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -40,7 +58,7 @@ export default function RootLayout({
         <link rel="icon" href="/icons/icon-192.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
       </head>
-      <body className="antialiased select-none bg-fi-bg min-h-full text-slate-900 overflow-x-hidden">
+      <body className="antialiased select-none bg-fi-bg min-h-full font-sans text-fi-text overflow-x-hidden">
         <AppProvider>{children}</AppProvider>
       </body>
     </html>
