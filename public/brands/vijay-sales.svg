@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="40" fill="#E31837" />
+  <g transform="translate(100, 108)">
+    <text x="0" y="0" fill="#FFFFFF" font-family="'Trebuchet MS', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-style="italic" font-size="26" text-anchor="middle" letter-spacing="-0.5">vijay sales</text>
+  </g>
+</svg>

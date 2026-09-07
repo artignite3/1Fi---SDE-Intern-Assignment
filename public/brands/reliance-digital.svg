@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+  <g transform="translate(100, 75)">
+    <!-- Reliance flower / logo -->
+    <circle cx="0" cy="0" r="18" fill="#1C3F94" />
+    <path d="M0 -14 L6 0 L0 14 L-6 0 Z" fill="#E31E24" />
+  </g>
+  <text x="100" y="125" fill="#E31E24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="16" text-anchor="middle">Reliance</text>
+  <text x="100" y="148" fill="#00A2E8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="18" text-anchor="middle" letter-spacing="1">digital</text>
+</svg>

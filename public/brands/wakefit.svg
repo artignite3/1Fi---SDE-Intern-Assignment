@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="40" fill="#311B92" />
+  <g transform="translate(100, 108)">
+    <text x="0" y="0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="30" text-anchor="middle" letter-spacing="-1">wake<tspan fill="#64B5F6">fit</tspan></text>
+  </g>
+</svg>

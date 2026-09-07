@@ -23,11 +23,11 @@ export function HomeView() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const topBrandsShort = [
-    { name: "Reliance Digital", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Reliance_Digital_Logo.svg" },
-    { name: "Croma", logo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Croma_Logo.png" },
-    { name: "Vijay Sales", logo: "https://upload.wikimedia.org/wikipedia/commons/9/94/Vijay_Sales_Logo.png" },
-    { name: "MakeMyTrip", logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/MakeMyTrip_Logo.png" },
-    { name: "Air India", logo: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Air_India_Logo.svg" },
+    { name: "Reliance Digital", logo: "/brands/reliance-digital.svg" },
+    { name: "Croma", logo: "/brands/croma.svg" },
+    { name: "Vijay Sales", logo: "/brands/vijay-sales.svg" },
+    { name: "MakeMyTrip", logo: "/brands/makemytrip.svg" },
+    { name: "Air India", logo: "/brands/air-india.svg" },
   ];
 
   return (

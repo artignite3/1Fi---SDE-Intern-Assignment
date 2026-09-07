@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="40" fill="#E65100" />
+  <g transform="translate(100, 75)">
+    <!-- Tanishq signature symbol in maroon on gold/orange -->
+    <path d="M-15 -15 C-5 -25 5 -25 15 -15 C20 -5 15 5 0 20 C-15 5 -20 -5 -15 -15 Z" fill="none" stroke="#600D53" stroke-width="3.5" />
+    <circle cx="0" cy="5" r="4.5" fill="#600D53" />
+  </g>
+  <text x="100" y="145" fill="#600D53" font-family="'Times New Roman', Georgia, serif" font-weight="bold" font-size="22" text-anchor="middle" letter-spacing="2">TANISHQ</text>
+  <text x="100" y="165" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="9" text-anchor="middle" letter-spacing="1">GOLD COIN</text>
+</svg>

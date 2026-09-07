@@ -4,7 +4,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-air-india",
     name: "Air India",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Air_India_Logo.svg",
+    logo: "/brands/air-india.svg",
     category: "Travel",
     maxTenureMonths: 18,
     tagline: "No-cost EMIs upto 18 months",
@@ -13,7 +13,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-apple",
     name: "Apple Premium Reseller",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    logo: "/brands/apple.svg",
     category: "Electronics",
     maxTenureMonths: 24,
     tagline: "No-cost EMIs upto 24 months",
@@ -22,7 +22,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-caratlane",
     name: "CaratLane",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/CaratLane_Logo.svg",
+    logo: "/brands/caratlane.svg",
     category: "Jewellery",
     maxTenureMonths: 6,
     tagline: "No-cost EMIs upto 6 months",
@@ -31,7 +31,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-cgh-earth",
     name: "CGH Earth",
-    logo: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=100&auto=format&fit=crop&q=80",
+    logo: "/brands/cgh-earth.svg",
     category: "Hospitality",
     maxTenureMonths: 24,
     tagline: "No-cost EMIs upto 24 months",
@@ -40,7 +40,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-croma",
     name: "Croma",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Croma_Logo.png",
+    logo: "/brands/croma.svg",
     category: "Electronics",
     maxTenureMonths: 6,
     tagline: "No-cost EMIs upto 6 months",
@@ -49,7 +49,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-easemytrip-holiday",
     name: "EaseMyTrip Holiday",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a2/EaseMyTrip_Logo.png",
+    logo: "/brands/easemytrip.svg",
     category: "Travel",
     maxTenureMonths: 24,
     tagline: "No-cost EMIs upto 24 months",
@@ -58,7 +58,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-goibibo",
     name: "Goibibo",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Goibibo_logo.png",
+    logo: "/brands/goibibo.svg",
     category: "Travel",
     maxTenureMonths: 12,
     tagline: "No-cost EMIs upto 12 months",
@@ -67,7 +67,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-makemytrip",
     name: "MakeMyTrip",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/MakeMyTrip_Logo.png",
+    logo: "/brands/makemytrip.svg",
     category: "Travel",
     maxTenureMonths: 24,
     tagline: "No-cost EMIs upto 24 months",
@@ -76,7 +76,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-reliance-digital",
     name: "Reliance Digital",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Reliance_Digital_Logo.svg",
+    logo: "/brands/reliance-digital.svg",
     category: "Electronics",
     maxTenureMonths: 6,
     tagline: "No-cost EMIs upto 6 months",
@@ -85,7 +85,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-tanishq-gold",
     name: "Tanishq Gold Coin",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/Tanishq_Logo.svg",
+    logo: "/brands/tanishq-gold.svg",
     category: "Jewellery",
     maxTenureMonths: 6,
     tagline: "No-cost EMIs upto 6 months",
@@ -94,7 +94,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-tanishq-studded",
     name: "Tanishq Studded",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/Tanishq_Logo.svg",
+    logo: "/brands/tanishq.svg",
     category: "Jewellery",
     maxTenureMonths: 12,
     tagline: "No-cost EMIs upto 12 months",
@@ -103,7 +103,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-vijay-sales",
     name: "Vijay Sales",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/94/Vijay_Sales_Logo.png",
+    logo: "/brands/vijay-sales.svg",
     category: "Electronics",
     maxTenureMonths: 6,
     tagline: "No-cost EMIs upto 6 months",
@@ -112,7 +112,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-wakefit",
     name: "Wakefit",
-    logo: "https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?w=100&auto=format&fit=crop&q=80",
+    logo: "/brands/wakefit.svg",
     category: "Home & Furniture",
     maxTenureMonths: 12,
     tagline: "No-cost EMIs upto 12 months",
@@ -121,7 +121,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-world-of-titan",
     name: "World of Titan",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Titan_Company_Logo.svg",
+    logo: "/brands/titan.svg",
     category: "Watches & Accessories",
     maxTenureMonths: 24,
     tagline: "No-cost EMIs upto 24 months",
@@ -130,7 +130,7 @@ export const BRANDS: Brand[] = [
   {
     id: "brand-yatra",
     name: "Yatra Hotels & Holidays",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/Yatra_Online_Limited_Logo.svg",
+    logo: "/brands/yatra.svg",
     category: "Travel",
     maxTenureMonths: 24,
     tagline: "No-cost EMIs upto 24 months",
@@ -149,7 +149,7 @@ export const NEARBY_STORES: Store[] = [
     distanceKm: 1.2,
     phone: "+91 98112 34567",
     hours: "10:00 AM - 8:30 PM",
-    logo: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=100&auto=format&fit=crop&q=80",
+    logo: "/brands/easemytrip.svg",
   },
   {
     id: "store-2",
@@ -161,7 +161,7 @@ export const NEARBY_STORES: Store[] = [
     distanceKm: 2.8,
     phone: "+91 98110 88990",
     hours: "10:30 AM - 9:00 PM",
-    logo: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=100&auto=format&fit=crop&q=80",
+    logo: "/brands/cgh-earth.svg",
   },
   {
     id: "store-3",
@@ -173,7 +173,7 @@ export const NEARBY_STORES: Store[] = [
     distanceKm: 4.1,
     phone: "+91 98765 43210",
     hours: "09:30 AM - 8:00 PM",
-    logo: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=100&auto=format&fit=crop&q=80",
+    logo: "/brands/wakefit.svg",
   },
   {
     id: "store-4",
@@ -185,7 +185,7 @@ export const NEARBY_STORES: Store[] = [
     distanceKm: 5.4,
     phone: "+91 98123 45678",
     hours: "09:00 AM - 7:30 PM",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/1/12/Suzuki_logo_2.svg",
+    logo: "/brands/titan.svg",
   },
   {
     id: "store-5",
@@ -197,6 +197,6 @@ export const NEARBY_STORES: Store[] = [
     distanceKm: 6.8,
     phone: "+91 98123 99999",
     hours: "09:00 AM - 7:30 PM",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/1/12/Suzuki_logo_2.svg",
+    logo: "/brands/titan.svg",
   },
 ];

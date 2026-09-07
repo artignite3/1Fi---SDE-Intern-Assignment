@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="40" fill="#E31837" />
+  <g transform="translate(20, 70)">
+    <text x="80" y="38" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="24" text-anchor="middle" letter-spacing="1">AIR INDIA</text>
+    <path d="M125 15 C135 12, 145 20, 150 25 C145 27, 130 25, 122 28 C120 22, 122 18, 125 15 Z" fill="#FFCC00" />
+    <path d="M128 20 C138 18, 148 24, 152 30 C146 30, 134 27, 126 31 Z" fill="#FFFFFF" opacity="0.8" />
+  </g>
+</svg>

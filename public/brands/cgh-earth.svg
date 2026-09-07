@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="40" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+  <g transform="translate(100, 95)">
+    <text x="0" y="0" fill="#2E4A3D" font-family="'Georgia', serif" font-weight="900" font-size="24" text-anchor="middle">cgh earth</text>
+    <text x="0" y="24" fill="#718096" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="9" text-anchor="middle" letter-spacing="1">EXPERIENCE HOTELS</text>
+  </g>
+</svg>
