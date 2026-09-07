@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { StatusBar } from "./StatusBar";
 import { BottomNav } from "./BottomNav";
 import { ShopHeader } from "../shop/ShopHeader";
 import { TopBrandsTab } from "../shop/TopBrandsTab";
@@ -100,11 +99,6 @@ export function MobileShell() {
             : "max-w-2xl min-h-screen sm:rounded-3xl sm:shadow-2xl sm:border border-slate-800"
         }`}
       >
-        {/* Device Status Bar (shown on desktop or when mobile frame active) */}
-        <div className="hidden sm:block">
-          <StatusBar />
-        </div>
-
         {/* Scrollable Content Area */}
         <main className="flex-1 w-full pb-20 overflow-x-hidden">
           {/* TAB 1: SHOP */}
