@@ -168,8 +168,8 @@ All data is served dynamically through Next.js Route Handlers:
 ### Installation & Local Development
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/1Fi.git
-cd 1Fi
+git clone https://github.com/artignite3/1Fi---SDE-Intern-Assignment.git
+cd 1Fi---SDE-Intern-Assignment
 
 # 2. Install dependencies
 npm install
@@ -194,6 +194,3 @@ npm start
 
 - **Candidate**: Riddhesh Dalal
 - **Email**: riddhesh_2401ct18@iitp.ac.in
-- **Phone**: +91 8982094147
-- **Submission Form**: [1Fi SDE Intern Assignment Submission](https://forms.gle/WZYqNEAJZPXonLk88)
-- **Submission Deadline**: 8th September 2026
