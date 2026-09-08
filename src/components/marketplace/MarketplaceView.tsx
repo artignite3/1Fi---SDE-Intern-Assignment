@@ -19,6 +19,37 @@ import { ShimmerProductGrid } from "./ShimmerSkeleton";
 import { FilterDrawer } from "./FilterDrawer";
 import { useApp } from "@/context/AppContext";
 
+// Curated promotional banners for featured deals carousel
+const promoBanners = [
+  {
+    id: "promo-1",
+    tag: "APPLE FLAGSHIP DEAL",
+    title: "Upgrade to iPhone 16 Pro with Easy EMIs",
+    badge: "✓ Upto 24m no cost EMI",
+    bgGradient: "from-[#20153B] via-[#4A1E8A] to-[#E55A38]",
+    image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&auto=format&fit=crop&q=80",
+    productId: "prod-iphone-16-pro",
+  },
+  {
+    id: "promo-2",
+    tag: "HOLIDAY VOUCHER DEAL",
+    title: "Book Your Euro-phoric Escape with 1Fi",
+    badge: "✓ Starts at ₹2,481/mo",
+    bgGradient: "from-[#0F1E3D] via-[#1B3B6F] to-[#D97706]",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&auto=format&fit=crop&q=80",
+    productId: "prod-makemytrip-euro",
+  },
+  {
+    id: "promo-3",
+    tag: "PRO AUDIO & SOUND",
+    title: "Sony WH-1000XM5 Studio Noise Cancelling",
+    badge: "✓ ₹2,499/mo (0% Interest)",
+    bgGradient: "from-[#111827] via-[#312E81] to-[#6366F1]",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop&q=80",
+    productId: "prod-sony-wh1000xm5",
+  },
+];
+
 export function MarketplaceView() {
   const { openProductDetails } = useApp();
   const [products, setProducts] = useState<Product[]>([]);
@@ -55,44 +86,13 @@ export function MarketplaceView() {
     }
   };
 
-  // Promo Banners matching video & screenshot 8
-  const promoBanners = [
-    {
-      id: "promo-1",
-      tag: "APPLE FLAGSHIP DEAL",
-      title: "Upgrade to iPhone 16 Pro with Easy EMIs",
-      badge: "✓ Upto 24m no cost EMI",
-      bgGradient: "from-[#20153B] via-[#4A1E8A] to-[#E55A38]",
-      image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&auto=format&fit=crop&q=80",
-      productId: "prod-iphone-16-pro",
-    },
-    {
-      id: "promo-2",
-      tag: "HOLIDAY VOUCHER DEAL",
-      title: "Book Your Euro-phoric Escape with 1Fi",
-      badge: "✓ Starts at ₹2,481/mo",
-      bgGradient: "from-[#0F1E3D] via-[#1B3B6F] to-[#D97706]",
-      image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&auto=format&fit=crop&q=80",
-      productId: "prod-makemytrip-euro",
-    },
-    {
-      id: "promo-3",
-      tag: "PRO AUDIO & SOUND",
-      title: "Sony WH-1000XM5 Studio Noise Cancelling",
-      badge: "✓ ₹2,499/mo (0% Interest)",
-      bgGradient: "from-[#111827] via-[#312E81] to-[#6366F1]",
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop&q=80",
-      productId: "prod-sony-wh1000xm5",
-    },
-  ];
-
   // Auto rotate banner carousel
   useEffect(() => {
     const timer = setInterval(() => {
       setActivePromoIndex((prev) => (prev + 1) % promoBanners.length);
     }, 4500);
     return () => clearInterval(timer);
-  }, [promoBanners.length]);
+  }, []);
 
   // Load categories
   useEffect(() => {
@@ -208,7 +208,7 @@ export function MarketplaceView() {
         })}
       </div>
 
-      {/* Featured Deals Carousel (matching screenshot 8 & video) */}
+      {/* Featured Deals Carousel */}
       {!searchQuery && selectedCategory === "all" && (
         <div className="px-4">
           <div className="flex items-center justify-between mb-2">

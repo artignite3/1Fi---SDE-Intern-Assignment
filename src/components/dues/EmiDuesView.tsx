@@ -11,7 +11,7 @@ export function EmiDuesView() {
   return (
     <div className="min-h-[75vh] flex flex-col justify-center px-5 py-8">
       {orders.length === 0 ? (
-        /* Empty State matching screenshot 11 */
+        /* Empty State - No Dues Found */
         <div className="flex flex-col items-center justify-center text-center space-y-6">
           {/* Document receipt graphic */}
           <div className="relative w-28 h-32 flex items-center justify-center">

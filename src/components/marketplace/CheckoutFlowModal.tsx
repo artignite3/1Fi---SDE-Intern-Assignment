@@ -89,7 +89,7 @@ export function CheckoutFlowModal({
   return (
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div className="bg-white w-full max-w-md rounded-t-[36px] sm:rounded-3xl shadow-2xl animate-in slide-in-from-bottom duration-300 max-h-[92vh] flex flex-col overflow-hidden relative">
-        {/* Step Indicator Header matching video (00:03) */}
+        {/* Step Indicator Header */}
         <div className="p-5 border-b border-slate-100 flex items-center justify-between">
           <div>
             <span className="text-[11px] font-bold text-fi-purple">

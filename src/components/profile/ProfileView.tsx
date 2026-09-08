@@ -76,7 +76,7 @@ export function ProfileView() {
 
   return (
     <div className="px-4 py-6 space-y-6 pb-12">
-      {/* Title Header matching screenshot 3 & 5 */}
+      {/* Title Header */}
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Profile</h1>
         <p className="text-xs text-slate-500 mt-0.5">
@@ -84,7 +84,7 @@ export function ProfileView() {
         </p>
       </div>
 
-      {/* User Info Header Card matching screenshot 1 */}
+      {/* User Info Card */}
       <div className="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm flex items-center gap-4">
         <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#6C38FF] to-[#8B5CF6] text-white flex items-center justify-center text-xl font-bold shadow-md">
           {userProfile.name ? userProfile.name[0].toUpperCase() : "U"}
@@ -112,7 +112,7 @@ export function ProfileView() {
         </div>
       </div>
 
-      {/* Expanded KYC Details (matching screenshot 1) */}
+      {/* Expanded KYC Details */}
       {showKycDetails && (
         <div className="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm space-y-3.5 animate-in slide-in-from-top-4 duration-300">
           <div className="flex items-center justify-between pb-2 border-b border-slate-100">
@@ -167,7 +167,7 @@ export function ProfileView() {
         </div>
       )}
 
-      {/* Quick Actions List matching screenshot 3 & 5 */}
+      {/* Quick Actions List */}
       <div className="space-y-3">
         <div className="flex items-center gap-1 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
           <span>QUICK ACTIONS</span>
@@ -208,7 +208,7 @@ export function ProfileView() {
         </div>
       </div>
 
-      {/* Log Out Button matching screenshot 3 & 5 */}
+      {/* Log Out Button */}
       <button
         onClick={() => alert("Logged out successfully!")}
         className="w-full py-3.5 rounded-2xl bg-white border border-rose-100 text-rose-600 font-bold text-xs hover:bg-rose-50 transition-colors flex items-center justify-center gap-2 shadow-sm"
@@ -217,7 +217,7 @@ export function ProfileView() {
         <span>Log out</span>
       </button>
 
-      {/* Footer matching screenshot 5 */}
+      {/* App Footer */}
       <div className="text-center pt-2">
         <span className="text-xs text-slate-400 font-medium">
           Made with <span className="text-fi-purple">💜</span> by 1Fi

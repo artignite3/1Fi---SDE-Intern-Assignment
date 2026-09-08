@@ -134,7 +134,7 @@ export function PurchasesModal({ onClose }: { onClose: () => void }) {
           </button>
         </div>
 
-        {/* Status Sub-tabs matching video (01:03) */}
+        {/* Order Status Sub-tabs */}
         <div className="px-5 pt-3 flex gap-2 border-b border-slate-100 pb-3">
           {(["All", "Pending", "Completed"] as const).map((tab) => (
             <button
@@ -153,7 +153,7 @@ export function PurchasesModal({ onClose }: { onClose: () => void }) {
 
         <div className="overflow-y-auto p-5 space-y-4 flex-1">
           {filteredOrders.length === 0 ? (
-            /* Empty State matching video 01:03 */
+            /* Empty State */
             <div className="py-16 flex flex-col items-center justify-center text-center space-y-3">
               <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400">
                 <Package className="w-8 h-8" />

@@ -9,7 +9,7 @@ export function ShopHeader() {
 
   return (
     <div className="w-full select-none">
-      {/* Hero Banner matching screenshot 12 */}
+      {/* Shop Hero Banner */}
       <div className="relative overflow-hidden bg-gradient-to-br from-[#120E52] via-[#241380] to-[#5C24EB] text-white pt-5 pb-7 px-5 rounded-b-[30px] shadow-md">
         {/* Ambient glow */}
         <div className="absolute -top-12 -right-12 w-48 h-48 bg-purple-400/20 rounded-full blur-3xl pointer-events-none" />
@@ -58,7 +58,7 @@ export function ShopHeader() {
         </div>
       </div>
 
-      {/* Sub-Tabs Switcher matching 1Fi design (clean, slightly lighter background) */}
+      {/* Sub-Tabs Switcher */}
       <div className="px-4 -mt-4 relative z-20">
         <div className="bg-[#F5F3FF]/95 backdrop-blur-md p-1 rounded-full flex items-center shadow-[0_2px_10px_rgba(0,0,0,0.05)] border border-white/95">
           <button

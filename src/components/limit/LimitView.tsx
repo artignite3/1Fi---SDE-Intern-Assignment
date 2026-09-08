@@ -26,7 +26,7 @@ export function LimitView() {
 
   return (
     <div className="min-h-[75vh] flex flex-col justify-center px-5 py-8">
-      {/* Visual lock & stars matching screenshot 6 */}
+      {/* Credit Limit Lock Illustration */}
       <div className="flex flex-col items-center justify-center text-center space-y-6">
         <div className="relative w-28 h-28 flex items-center justify-center">
           <div className="w-20 h-24 bg-gradient-to-b from-[#7C3AED] to-[#581C87] rounded-3xl shadow-xl flex items-center justify-center relative border-2 border-purple-300/40">

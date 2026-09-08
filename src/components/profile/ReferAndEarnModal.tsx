@@ -41,7 +41,7 @@ export function ReferAndEarnModal({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="overflow-y-auto p-5 space-y-5 flex-1">
-          {/* Hero Banner matching video (01:09) */}
+          {/* Refer & Earn Hero Banner */}
           <div className="relative overflow-hidden rounded-3xl p-5 bg-gradient-to-r from-[#1E085A] via-[#3B0FA0] to-[#6C38FF] text-white shadow-md">
             <div className="relative z-10 max-w-[65%] space-y-1">
               <p className="text-xs text-purple-100">Invite your friends & earn</p>
@@ -60,7 +60,7 @@ export function ReferAndEarnModal({ onClose }: { onClose: () => void }) {
             </div>
           </div>
 
-          {/* Stats 3 columns matching video */}
+          {/* Referral Stats */}
           <div className="grid grid-cols-3 gap-2 text-center">
             <div className="bg-slate-50 p-3 rounded-2xl border border-slate-100">
               <span className="text-lg font-black text-slate-900 block">0</span>
@@ -82,7 +82,7 @@ export function ReferAndEarnModal({ onClose }: { onClose: () => void }) {
             </div>
           </div>
 
-          {/* Referral Code & Actions matching video */}
+          {/* Referral Code & Actions */}
           <div className="space-y-2.5">
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block text-center">
               YOUR REFERRAL CODE
@@ -118,7 +118,7 @@ export function ReferAndEarnModal({ onClose }: { onClose: () => void }) {
             </div>
           </div>
 
-          {/* Reward Tiers Table matching video (01:10) */}
+          {/* Reward Tiers Table */}
           <div className="space-y-3 pt-2">
             <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block">
               Reward Tiers

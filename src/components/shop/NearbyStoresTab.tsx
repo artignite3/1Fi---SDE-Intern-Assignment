@@ -142,7 +142,7 @@ export function NearbyStoresTab() {
         </div>
       )}
 
-      {/* Location Modal Drawer: Bottom Sheet matching video 00:52 - 01:00 */}
+      {/* Location Selection Bottom Sheet */}
       {isLocationModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end justify-center p-0">
           <div className="bg-white w-full max-w-[430px] rounded-t-[28px] p-6 pb-8 shadow-[0_-8px_30px_rgba(0,0,0,0.15)] animate-in slide-in-from-bottom duration-300">
@@ -159,7 +159,7 @@ export function NearbyStoresTab() {
               </button>
             </div>
 
-            {/* Use Current Location Button matching video 00:52 */}
+            {/* Use Current Location Button */}
             <button
               onClick={handleUseCurrentLocation}
               disabled={isDetecting}

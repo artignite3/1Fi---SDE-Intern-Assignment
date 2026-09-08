@@ -33,7 +33,7 @@ export function SupportFAQModal({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="overflow-y-auto p-5 space-y-5 flex-1">
-          {/* Top Support Cards matching screenshot 2 */}
+          {/* Quick Contact Cards */}
           <div className="grid grid-cols-2 gap-3">
             <a
               href="mailto:support@1fi.in"
@@ -66,7 +66,7 @@ export function SupportFAQModal({ onClose }: { onClose: () => void }) {
             </div>
           </div>
 
-          {/* Category Tabs matching screenshot 2 & 7 */}
+          {/* FAQ Category Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">
             {tabs.map((tab) => (
               <button
@@ -86,7 +86,7 @@ export function SupportFAQModal({ onClose }: { onClose: () => void }) {
             ))}
           </div>
 
-          {/* FAQ Accordion List matching screenshot 2 */}
+          {/* FAQ Accordion List */}
           <div className="space-y-3">
             <div className="flex items-center gap-1.5 text-xs font-bold text-slate-900">
               <div className="w-1 h-3.5 bg-fi-purple rounded-full" />

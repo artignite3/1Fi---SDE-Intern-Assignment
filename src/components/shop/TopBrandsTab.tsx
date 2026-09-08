@@ -27,7 +27,7 @@ export function TopBrandsTab() {
 
   return (
     <div className="px-4 py-4 space-y-4">
-      {/* Search Bar matching screenshot 12 */}
+      {/* Brand Search Bar */}
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
           <Search className="h-4 w-4 text-slate-400" />
@@ -76,7 +76,7 @@ export function TopBrandsTab() {
               className="bg-white rounded-[20px] p-3.5 border border-fi-border shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:shadow-md transition-all flex items-center justify-between cursor-pointer group"
             >
               <div className="flex items-center gap-3.5">
-                {/* Brand Logo Container matching screenshot 4 */}
+                {/* Brand Logo Container */}
                 <div className="w-[52px] h-[52px] rounded-[16px] bg-[#F8F9FC] border border-[#F0F2F9] flex items-center justify-center overflow-hidden shrink-0 p-2">
                   <img
                     src={brand.logo}

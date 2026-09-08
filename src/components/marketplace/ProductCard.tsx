@@ -91,7 +91,7 @@ export function ProductCard({ product }: { product: Product }) {
           )}
         </div>
 
-        {/* 1Fi EMI Pill matching screenshot style */}
+        {/* 0% EMI Installment Badge */}
         <div className="bg-fi-purple-light group-hover:bg-[#EFEBFF] border border-[#E9E2FB] rounded-[13px] px-2 py-1.5 flex items-center justify-between transition-colors">
           <div className="flex flex-col">
             <span className="text-[8.5px] text-fi-purple/80 font-medium leading-none">0% No-cost EMI</span>

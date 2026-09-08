@@ -11,7 +11,7 @@ export function ShimmerSkeletonList({ count = 4 }: { count?: number }) {
           {/* Image placeholder */}
           <div className="w-12 h-12 rounded-xl bg-slate-100 shrink-0" />
 
-          {/* Text placeholder lines matching screenshot 29 */}
+          {/* Text placeholder lines */}
           <div className="flex-1 space-y-2">
             <div className="h-3.5 bg-slate-100 rounded-full w-3/5" />
             <div className="h-2.5 bg-slate-100 rounded-full w-4/5" />

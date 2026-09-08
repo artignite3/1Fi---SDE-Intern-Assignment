@@ -56,7 +56,14 @@ export function MobileShell() {
       <div className="w-full max-w-[430px] min-h-screen bg-fi-bg sm:shadow-2xl flex flex-col relative overflow-x-hidden">
         {/* Scrollable Main Content Area */}
         <main className="flex-1 w-full pb-24 overflow-x-hidden">
-          {/* TAB 1: SHOP (Default / Main Assignment Flow) */}
+          {/* HOME TAB (Default Landing) */}
+          {activeBottomTab === "home" && (
+            <div className="animate-in fade-in duration-200">
+              <HomeView />
+            </div>
+          )}
+
+          {/* SHOP TAB */}
           {activeBottomTab === "shop" && (
             <div className="animate-in fade-in duration-200">
               <ShopHeader />
@@ -66,28 +73,21 @@ export function MobileShell() {
             </div>
           )}
 
-          {/* TAB 2: HOME */}
-          {activeBottomTab === "home" && (
-            <div className="animate-in fade-in duration-200">
-              <HomeView />
-            </div>
-          )}
-
-          {/* TAB 3: EMI DUES */}
+          {/* EMI DUES TAB */}
           {activeBottomTab === "dues" && (
             <div className="animate-in fade-in duration-200">
               <EmiDuesView />
             </div>
           )}
 
-          {/* TAB 4: LIMIT */}
+          {/* CREDIT LIMIT TAB */}
           {activeBottomTab === "limit" && (
             <div className="animate-in fade-in duration-200">
               <LimitView />
             </div>
           )}
 
-          {/* TAB 5: PROFILE */}
+          {/* USER PROFILE TAB */}
           {activeBottomTab === "profile" && (
             <div className="animate-in fade-in duration-200">
               <ProfileView />
