@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Sparkles,
   ArrowRight,
@@ -100,37 +101,6 @@ export function HomeView() {
     { name: "LG", logo: "/brands/lg.svg" },
     { name: "World of Titan", logo: "/brands/titan.svg" },
     { name: "CGH Earth", logo: "/brands/cgh-earth.svg" },
-  ];
-
-  const whyPayFeatures = [
-    {
-      title: "Keep growing",
-      desc: "No tax, no exit load.",
-      icon: TrendingUp,
-      bg: "bg-emerald-50",
-      color: "text-emerald-600",
-    },
-    {
-      title: "0% interest",
-      desc: "Repay only what you spend.",
-      icon: Percent,
-      bg: "bg-purple-50",
-      color: "text-fi-purple",
-    },
-    {
-      title: "Zero charges",
-      desc: "No fees, nothing hidden.",
-      icon: ShieldCheck,
-      bg: "bg-amber-50",
-      color: "text-amber-600",
-    },
-    {
-      title: "Quickest approvals",
-      desc: "Instant eligibility check.",
-      icon: Zap,
-      bg: "bg-blue-50",
-      color: "text-blue-600",
-    },
   ];
 
   return (
@@ -286,44 +256,154 @@ export function HomeView() {
         </div>
       </div>
 
-      {/* Why Pay With 1Fi: Continuous smooth moving slider in ALTERNATE direction (moving right) */}
-      <div className="space-y-3">
+      {/* Why Pay With 1Fi: Two Layers with Left Sway -> Slowdown/Pause -> Right Sway -> Repeat */}
+      <div className="space-y-2.5">
         <div className="px-4 flex items-center gap-1.5 text-[11.5px] font-extrabold text-fi-purple uppercase tracking-[0.06em]">
           <div className="w-1 h-3.5 bg-fi-purple rounded-full" />
           <span>WHY PAY WITH 1FI</span>
         </div>
 
-        {/* Alternate Marquee moving in opposite direction (rightward) */}
-        <div className="relative overflow-hidden w-full py-1">
+        {/* Two-layer horizontal container with subtle edge fade masks */}
+        <div className="relative overflow-hidden w-full py-1 space-y-2.5">
           {/* Subtle edge fade masks */}
           <div className="absolute left-0 inset-y-0 w-6 bg-gradient-to-r from-fi-bg to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 inset-y-0 w-6 bg-gradient-to-l from-fi-bg to-transparent z-10 pointer-events-none" />
 
-          <div className="animate-marquee-right flex gap-3 px-3">
-            {[...whyPayFeatures, ...whyPayFeatures, ...whyPayFeatures].map((item, idx) => {
+          {/* LAYER 1 (Top Layer): Moves a bit left -> pauses -> moves right -> repeats */}
+          <motion.div
+            animate={{
+              x: [0, -42, -42, 20, 0],
+            }}
+            transition={{
+              duration: 6,
+              times: [0, 0.44, 0.54, 0.92, 1],
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex gap-2.5 px-4 w-max cursor-grab active:cursor-grabbing"
+          >
+            {[
+              {
+                title: "0% interest",
+                desc: "Repay only what you spend.",
+                icon: Percent,
+                bg: "bg-[#F6F2FE]",
+                color: "text-fi-purple",
+              },
+              {
+                title: "Keep growing",
+                desc: "No tax, no exit load.",
+                icon: TrendingUp,
+                bg: "bg-[#EDFAF3]",
+                color: "text-[#059669]",
+              },
+              {
+                title: "Zero charges",
+                desc: "No fees, nothing hidden.",
+                icon: ShieldCheck,
+                bg: "bg-[#FFF9EC]",
+                color: "text-[#D97706]",
+              },
+              {
+                title: "0% interest",
+                desc: "Repay only what you spend.",
+                icon: Percent,
+                bg: "bg-[#F6F2FE]",
+                color: "text-fi-purple",
+              },
+            ].map((item, idx) => {
               const Icon = item.icon;
               return (
                 <div
                   key={idx}
-                  className="bg-white p-3.5 rounded-2xl border border-[#F0F2F9] shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex items-start gap-3 w-[210px] shrink-0 select-none hover:shadow-md transition-shadow"
+                  className="bg-white p-3 px-3.5 rounded-[22px] border border-[#F0F2F9] shadow-[0_2px_10px_rgba(0,0,0,0.03)] flex items-center gap-3 w-[220px] shrink-0 select-none hover:shadow-md transition-shadow"
                 >
                   <div
-                    className={`w-9 h-9 rounded-xl ${item.bg} ${item.color} flex items-center justify-center shrink-0`}
+                    className={`w-10 h-10 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center shrink-0 font-bold text-sm`}
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-slate-900 leading-tight">
+                    <h4 className="text-[13px] font-bold text-slate-900 leading-tight">
                       {item.title}
                     </h4>
-                    <p className="text-[10px] text-slate-500 mt-1 leading-snug">
+                    <p className="text-[11px] text-slate-500 mt-0.5 leading-tight whitespace-nowrap">
                       {item.desc}
                     </p>
                   </div>
                 </div>
               );
             })}
-          </div>
+          </motion.div>
+
+          {/* LAYER 2 (Bottom Layer): Complementary alternate sway (moves right -> pauses -> moves left) */}
+          <motion.div
+            animate={{
+              x: [-20, 24, 24, -36, -20],
+            }}
+            transition={{
+              duration: 6,
+              times: [0, 0.44, 0.54, 0.92, 1],
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="flex gap-2.5 px-4 w-max cursor-grab active:cursor-grabbing"
+          >
+            {[
+              {
+                title: "Zero charges",
+                desc: "No fees, nothing hidden.",
+                icon: ShieldCheck,
+                bg: "bg-[#FFF9EC]",
+                color: "text-[#D97706]",
+              },
+              {
+                title: "Quickest approvals",
+                desc: "Instant eligibility check.",
+                icon: Zap,
+                bg: "bg-[#EDF5FF]",
+                color: "text-[#2563EB]",
+              },
+              {
+                title: "Keep growing",
+                desc: "No tax, no exit load.",
+                icon: TrendingUp,
+                bg: "bg-[#EDFAF3]",
+                color: "text-[#059669]",
+              },
+              {
+                title: "Quickest approvals",
+                desc: "Instant eligibility check.",
+                icon: Zap,
+                bg: "bg-[#EDF5FF]",
+                color: "text-[#2563EB]",
+              },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white p-3 px-3.5 rounded-[22px] border border-[#F0F2F9] shadow-[0_2px_10px_rgba(0,0,0,0.03)] flex items-center gap-3 w-[220px] shrink-0 select-none hover:shadow-md transition-shadow"
+                >
+                  <div
+                    className={`w-10 h-10 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center shrink-0 font-bold text-sm`}
+                  >
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-[13px] font-bold text-slate-900 leading-tight">
+                      {item.title}
+                    </h4>
+                    <p className="text-[11px] text-slate-500 mt-0.5 leading-tight whitespace-nowrap">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </motion.div>
         </div>
       </div>
 
