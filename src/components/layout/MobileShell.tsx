@@ -52,7 +52,7 @@ export function MobileShell() {
       */}
       <div className="w-full max-w-[430px] min-h-screen bg-fi-bg sm:shadow-2xl flex flex-col relative overflow-x-hidden">
         {/* Scrollable Main Content Area */}
-        <main className="flex-1 w-full pb-20 overflow-x-hidden">
+        <main className="flex-1 w-full pb-24 overflow-x-hidden">
           {/* TAB 1: SHOP (Default / Main Assignment Flow) */}
           {activeBottomTab === "shop" && (
             <div className="animate-in fade-in duration-200">
