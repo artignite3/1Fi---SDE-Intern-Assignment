@@ -168,8 +168,8 @@ All data is served dynamically through Next.js Route Handlers:
 ### Installation & Local Development
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/1Fi.git
-cd 1Fi
+git clone https://github.com/artignite3/1Fi---SDE-Intern-Assignment.git
+cd 1Fi---SDE-Intern-Assignment
 
 # 2. Install dependencies
 npm install
