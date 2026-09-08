@@ -16,6 +16,7 @@ import { SupportFAQModal } from "../profile/SupportFAQModal";
 import { ReferAndEarnModal } from "../profile/ReferAndEarnModal";
 import { PurchasesModal } from "../profile/PurchasesModal";
 import { useApp } from "@/context/AppContext";
+import { ProductVariant, EMIPlan } from "@/lib/types";
 
 export function MobileShell() {
   const {
@@ -34,7 +35,7 @@ export function MobileShell() {
     addOrder,
   } = useApp();
 
-  const handleProceedToCheckout = (variant: any, plan: any) => {
+  const handleProceedToCheckout = (variant: ProductVariant, plan: EMIPlan) => {
     setSelectedVariant(variant);
     setSelectedEMIPlan(plan);
     setActiveModal("none");

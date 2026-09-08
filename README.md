@@ -1,60 +1,111 @@
-# 1Fi Marketplace - Shop Page Implementation
+# 1Fi Marketplace — Shop Page Implementation
 
-A modern, pixel-perfect implementation of the **1Fi Marketplace** section within the **Shop** experience of the 1Fi application, built with **Next.js 14**, **React 18**, **TypeScript**, and **Tailwind CSS**.
+A modern, pixel-perfect, fully responsive mobile web application for the **1Fi Marketplace** section within the **Shop** experience of the 1Fi application, built with **Next.js 14 App Router**, **React 18**, **TypeScript**, and **Tailwind CSS**.
 
 ---
 
-## 🌟 Overview & Features
+## 🌟 Overview & Feature Highlights
 
-### 1. Shop Page Navigation & Sub-Tabs
-- **Hero Banner**: Faithfully reproduces 1Fi's signature blue-purple gradient hero banner (`✦ NO-COST EMIs`, *"Shop today, Pay later using Mutual funds"*, 3D lifestyle illustration & golden confetti).
-- **Sub-Tabs Switcher**:
-  - `Top Brands`: Interactive brand listing (Air India, Apple Premium Reseller, CaratLane, Croma, MakeMyTrip, Reliance Digital, Tanishq, Vijay Sales, etc.) with search filter and empty states.
-  - `Nearby Stores`: Location-aware store directory with distance markers (`km`), store hours, calling & directions triggers, and a **"Select Your Location"** drawer with live GPS detection animation and pincode search.
+### 1. Shop Experience & 3 Sub-Tabs
+- **Signature Gradient Hero Banner**: Faithful reproduction of 1Fi's blue-purple gradient hero banner (`✦ NO-COST EMIs`, *"Shop today, Pay later using Mutual funds"*).
+- **Sub-Tabs Navigation**:
+  - `Top Brands`: Searchable directory of partner retail brands (Apple, Croma, Vijay Sales, Reliance Digital, Tanishq, CaratLane, Dyson, Sony, LG, Wakefit, MakeMyTrip, EaseMyTrip, Goibibo, Air India, Taj, Yatra, CGH Earth) with local SVGs and 0% EMI badges.
+  - `Nearby Stores`: Location-aware store directory with distance markers (`km`), store hours, and simulated GPS location picker.
   - `1Fi Marketplace`: The comprehensive marketplace flow evaluated in the assignment.
 
-### 2. 1Fi Marketplace Features
-- **Product Catalog & Dynamic Search**: Instant debounced search for products, brands, and categories.
-- **Category Filter Pills**: Sparkles (All Products), Smartphones, Laptops & PCs, Audio & Wearables, TVs & Home, Travel & Tours, Gold & Luxury.
-- **Promotional Carousel**: Auto-rotating feature banners (*"Apple Flagship Deal"*, *"Euro-phoric Escape"*, *"Sony ANC"*).
-- **Comprehensive Filter & Sort Drawer**:
-  - Sort by Featured, Price Low-High, Price High-Low, Rating, Highest Discount.
-  - Price Range filters (Under ₹30k, ₹30k-₹75k, ₹75k-₹1.5L, ₹1.5L+).
-  - No-cost EMI tenure filter (3, 6, 9, 12, 18, 24 months).
-  - Brand filter tags.
-- **Product Cards**: High-res images, brand badges, discount percentages, customer ratings, color swatches preview, and dynamic `0% No-cost EMI from ₹X/mo` pills.
-- **Loading & Empty States**: Shimmer skeleton cards matching the 1Fi design system and search zero-results states.
+### 2. 1Fi Marketplace Feature Module
+- **Category Rail**: Smooth horizontal scrolling filter pills (`All`, `Electronics`, `Gold & Silver`, `EV & Mobility`, `Travel & Stay`, `Fashion & Watches`, `Home & Living`).
+- **Live Search & Filtering**: Instant debounced search for products, brands, and categories.
+- **Filter & Sort Bottom Sheet**: Multi-criteria filtering by Category, Brand, Price Range slider, and Sorting options (Featured, Price: Low-High, Price: High-Low, Rating, Discount).
+- **Interactive Product Cards**: High-res images, brand badges, discount percentages, calculated 0% monthly EMI badges, and "Pledge MF to Buy" CTA.
+- **Product Detail Modal**: Live color & storage variant switching with instant price & EMI recalculation, technical specifications, warranty, and voucher delivery guarantees.
+- **Dynamic 0% No-Cost EMI Calculator**: Interactive tenure selection (3, 6, 9, 12, 18, 24 months) showing monthly installment, total interest saved against credit cards, and Mutual Fund portfolio holding requirements.
+- **3-Step MF Pledge Checkout Flow**:
+  1. *Step 1 (Pledge Portfolio)*: Allocates portfolio units without liquidating mutual funds.
+  2. *Step 2 (OTP Verification)*: Simulates SEBI / CAMS / KFintech lien approval.
+  3. *Step 3 (Sanction & Voucher)*: Animated confetti celebration screen displaying the issued shopping voucher code, auto-saving order to `Purchases` and creating repayment dues in `EMI Dues`.
 
-### 3. Interactive Product Details & EMI Selector
-- **Interactive Variant Picker**: Switch colors and storage options with live price & EMI recalculation.
-- **Dynamic 0% EMI Calculator Engine**:
-  - Interactive tenure selection: 3, 6, 9, 12, 18, 24 months.
-  - Transparent cost breakdown: Monthly installment, 0% interest, ₹0 processing fee, interest saved amount.
-  - Mutual Fund Lien Collateral calculator (e.g. ₹X pledged while your portfolio continues compounding).
-- **Technical Specs & Highlights Accordion**: In-depth product features, warranty, and delivery information.
-
-### 4. Multi-Step MF-Backed Checkout Flow
-- **Step 1: Review Summary**: Complete loan and EMI installment breakdown.
-- **Step 2: Mutual Fund Pledge**: Real-time portfolio check via MFCentral/PAN, OTP authorization simulator, and lien confirmation.
-- **Step 3: Loan Sanction & Order Confirmation**: Festive confetti celebration, loan account number, sanction letter download, and auto-debit schedule.
-
-### 5. Authentic Companion Tabs
-- **Home Tab**: Hero get started card, top brands carousel, "Why pay with 1Fi" benefit grid, "How 1Fi Works" 3-step guide, Refer & Earn banner, and expandable FAQ accordion.
-- **EMI Dues Tab**: "Nothing Due Yet" empty state matching screenshots + active loan repayment tracker.
-- **Limit Tab**: "Check Eligibility" lock illustration and mutual fund portfolio limit unlock simulator.
-- **Profile Tab**: Profile details, KYC verification status, Purchases history modal, Refer & Earn modal, and Support & FAQs drawer.
-- **Device Frame Toggle**: Switch between **Mobile App Frame (iPhone/Android aspect ratio)** and **Full Screen Responsive Web**.
+### 3. Authentic Companion Views & Modals (1Fi App Walkthrough)
+- **Home View**: Credit limit dashboard (`₹2,50,000`), portfolio stats (`₹4,85,000`), merchant offers carousel, value proposition cards, and "How 1Fi Works" 3-step guide.
+- **EMI Dues View**: Zero dues celebration state + active loan repayment tracker with "Pay Now" simulation.
+- **Limit View**: Credit line unlock simulator and LTV calculator.
+- **Profile View & Modals**: KYC verification card, Support & FAQs accordion modal, Refer & Earn referral link generator, and Purchases history tracker.
+- **Floating Bottom Capsule Dock**: Floating rounded white pill dock (`rounded-[32px]`) with top purple indicator bar and single-line baseline typography.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 🏗️ Architecture & Codebase Structure
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router, React Server Components & Client Components)
-- **Language**: [TypeScript](https://www.typescriptlang.org/) (Strict type-safety)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with customized 1Fi color tokens (`#6C38FF`)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Animations & Effects**: [Framer Motion](https://www.framer.com/motion/) & [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
-- **Architecture**: Clean modular separation across `src/components/`, `src/lib/data/`, `src/lib/api/`, `src/lib/utils/`, and `src/context/`.
+```
+├── public/                       # Static public assets & brand vector SVGs
+│   ├── brands/                   # 20 local partner SVG logos
+│   ├── icons/                    # PWA web app icons
+│   ├── manifest.json             # Web App Manifest for mobile installation
+│   └── README.md                 # Public assets documentation
+│
+├── src/
+│   ├── app/                      # Next.js 14 App Router
+│   │   ├── api/                  # Backend REST API route handlers
+│   │   │   ├── brands/           # /api/brands
+│   │   │   ├── categories/       # /api/categories
+│   │   │   ├── emi/calculate/    # /api/emi/calculate
+│   │   │   ├── products/         # /api/products & /api/products/[id]
+│   │   │   └── stores/           # /api/stores
+│   │   ├── globals.css           # Tailwind layers & utilities
+│   │   ├── layout.tsx            # Font optimization & PWA metadata
+│   │   ├── page.tsx              # MobileShell container mount
+│   │   └── README.md             # App router documentation
+│   │
+│   ├── components/               # Modular UI Component hierarchy
+│   │   ├── layout/               # MobileShell & Floating BottomNav
+│   │   ├── shop/                 # ShopHeader, TopBrandsTab, NearbyStoresTab
+│   │   ├── marketplace/          # Marketplace, ProductCard, Detail, EMI, Checkout
+│   │   ├── home/                 # Home credit dashboard
+│   │   ├── dues/                 # EMI Dues & repayment tracker
+│   │   ├── limit/                # Limit unlock & eligibility simulator
+│   │   ├── profile/              # Profile, FAQs, Refer & Earn, Purchases
+│   │   └── README.md             # Components documentation
+│   │
+│   ├── context/                  # Global reactive state management
+│   │   ├── AppContext.tsx        # Central context & hooks
+│   │   └── README.md             # Context documentation
+│   │
+│   └── lib/                      # Core business logic & services
+│       ├── api/                  # marketplaceService.ts (API client)
+│       ├── data/                 # Static datasets (products, brands, faqs)
+│       ├── utils/                # emi.ts (0% EMI engine), cn.ts
+│       ├── types.ts              # TypeScript domain interfaces
+│       └── README.md             # Library documentation
+│
+└── README.md                     # Root project documentation
+```
+
+---
+
+## 📡 Backend REST API Reference
+
+| Method | Endpoint | Description | Query / Body Parameters |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/api/products` | Search & filter products | `query`, `category`, `brand`, `tenure`, `minPrice`, `maxPrice`, `sortBy` |
+| `GET` | `/api/products/[id]` | Fetch single product by ID | URL parameter `id` |
+| `GET` | `/api/categories` | Categories with item counts | None |
+| `GET` | `/api/brands` | Search partner brands | `query` |
+| `GET` | `/api/stores` | Nearby retail stores locator | `query`, `city` |
+| `POST` | `/api/emi/calculate` | Compute 0% EMI plans & savings | JSON: `{ price: number, tenureMonths?: number }` |
+
+---
+
+## 🎨 Design System & Tokens
+
+- **1Fi Signature Purple**: `#5C24EB`
+- **Soft Violet Pill Background**: `#F2EEFD`
+- **Clean App Background**: `#F8F9FA`
+- **Primary Charcoal Text**: `#181A20`
+- **Secondary Muted Text**: `#80869A`
+- **Crisp Card Border**: `#F1F3F9`
+- **Success Green**: `#00BA88`
+- **Typography**: Google Fonts `Plus Jakarta Sans` & `Inter`
+- **Universal Mobile Ratio**: Standard 6.3-inch (`1206 × 2622 px`, `19.5:9` aspect ratio, `max-w-[430px]` centered on desktop and full-screen on mobile).
 
 ---
 
@@ -65,14 +116,24 @@ A modern, pixel-perfect implementation of the **1Fi Marketplace** section within
 npm install
 ```
 
-### 2. Start Local Development Server
+### 2. Start Development Server
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) (or [http://localhost:3001](http://localhost:3001)) in your browser.
 
 ### 3. Build for Production
 ```bash
 npm run build
 npm start
+```
+
+---
+
+## 📦 Pushing to GitHub (Whenever You Are Ready)
+
+```bash
+git remote add origin https://github.com/<your-username>/<your-repo-name>.git
+git branch -M main
+git push -u origin main
 ```
