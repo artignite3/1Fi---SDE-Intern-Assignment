@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     title: "1Fi",
   },
   icons: {
-    icon: "/icons/icon-192.svg",
-    apple: "/icons/icon-192.svg",
+    icon: "/1fi_logo.jpeg",
+    apple: "/1fi_logo.jpeg",
   },
 };
 
@@ -55,8 +55,8 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <link rel="icon" href="/icons/icon-192.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+        <link rel="icon" href="/1fi_logo.jpeg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/1fi_logo.jpeg" />
       </head>
       <body className="antialiased select-none bg-fi-bg min-h-full font-sans text-fi-text overflow-x-hidden">
         <AppProvider>{children}</AppProvider>
