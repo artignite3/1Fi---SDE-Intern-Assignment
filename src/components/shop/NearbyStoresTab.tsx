@@ -142,33 +142,35 @@ export function NearbyStoresTab() {
         </div>
       )}
 
-      {/* Location Modal Drawer */}
+      {/* Location Modal Drawer: Bottom Sheet matching video 00:52 - 01:00 */}
       {isLocationModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4">
-          <div className="bg-white w-full max-w-md rounded-t-[32px] sm:rounded-3xl p-6 shadow-2xl animate-in slide-in-from-bottom duration-300">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end justify-center p-0">
+          <div className="bg-white w-full max-w-[430px] rounded-t-[28px] p-6 pb-8 shadow-[0_-8px_30px_rgba(0,0,0,0.15)] animate-in slide-in-from-bottom duration-300">
+            {/* Top drag handle indicator */}
             <div className="w-12 h-1 bg-slate-200 rounded-full mx-auto mb-4" />
+
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-base font-bold text-slate-900">Select Your Location</h3>
               <button
                 onClick={() => setIsLocationModalOpen(false)}
-                className="text-xs font-semibold text-slate-400 hover:text-slate-600"
+                className="text-xs font-semibold text-slate-400 hover:text-slate-600 p-1"
               >
                 ✕ Close
               </button>
             </div>
 
-            {/* Use Current Location Button matching screenshot 43-47 */}
+            {/* Use Current Location Button matching video 00:52 */}
             <button
               onClick={handleUseCurrentLocation}
               disabled={isDetecting}
-              className="w-full p-4 rounded-2xl border-2 border-purple-200 hover:border-fi-purple bg-purple-50/40 flex items-center justify-between text-left transition-all group"
+              className="w-full p-4 rounded-2xl border-2 border-purple-200 hover:border-fi-purple bg-purple-50/40 flex items-center justify-between text-left transition-all group active:scale-[0.99]"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-fi-purple">
+              <div className="flex items-center gap-3.5">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-fi-purple border border-purple-100 shrink-0">
                   {isDetecting ? (
                     <Loader2 className="w-5 h-5 animate-spin" />
                   ) : (
-                    <Navigation className="w-5 h-5 rotate-45" />
+                    <Navigation className="w-5 h-5 rotate-45 text-fi-purple fill-fi-purple/20" />
                   )}
                 </div>
                 <div>
@@ -184,11 +186,11 @@ export function NearbyStoresTab() {
 
             <div className="flex items-center my-4">
               <div className="flex-1 border-t border-slate-200" />
-              <span className="px-3 text-[11px] font-bold text-slate-400 uppercase">OR</span>
+              <span className="px-3 text-[11px] font-bold text-slate-400 uppercase tracking-wider">OR</span>
               <div className="flex-1 border-t border-slate-200" />
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               <label className="text-xs font-semibold text-slate-700">Enter Pincode</label>
               <div className="flex gap-2">
                 <div className="relative flex-1">
@@ -206,7 +208,7 @@ export function NearbyStoresTab() {
                     setSelectedCity("Gurugram");
                     setIsLocationModalOpen(false);
                   }}
-                  className="px-5 py-2.5 bg-fi-purple text-white rounded-xl text-xs font-bold hover:bg-fi-purple-hover transition-colors shadow-sm"
+                  className="px-5 py-2.5 bg-fi-purple text-white rounded-xl text-xs font-bold hover:bg-fi-purple-hover transition-colors shadow-sm active:scale-95"
                 >
                   Search
                 </button>

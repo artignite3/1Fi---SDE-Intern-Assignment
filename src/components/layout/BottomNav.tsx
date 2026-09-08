@@ -17,7 +17,7 @@ export function BottomNav() {
 
   return (
     <div className="fixed bottom-3 inset-x-0 max-w-[412px] mx-auto px-3.5 z-40 pointer-events-none">
-      <nav className="pointer-events-auto bg-white/95 backdrop-blur-md border border-slate-100/90 rounded-[32px] px-1.5 py-1 shadow-[0_8px_30px_rgba(0,0,0,0.08),0_2px_8px_rgba(0,0,0,0.04)]">
+      <nav className="pointer-events-auto bg-white/95 backdrop-blur-md border border-slate-100/90 rounded-[18px] px-1.5 py-1 shadow-[0_8px_30px_rgba(0,0,0,0.08),0_2px_8px_rgba(0,0,0,0.04)]">
         <div className="flex items-center justify-around">
           {navItems.map((item) => {
             const Icon = item.icon;

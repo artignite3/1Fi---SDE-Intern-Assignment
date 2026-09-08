@@ -102,6 +102,37 @@ export function HomeView() {
     { name: "CGH Earth", logo: "/brands/cgh-earth.svg" },
   ];
 
+  const whyPayFeatures = [
+    {
+      title: "Keep growing",
+      desc: "No tax, no exit load.",
+      icon: TrendingUp,
+      bg: "bg-emerald-50",
+      color: "text-emerald-600",
+    },
+    {
+      title: "0% interest",
+      desc: "Repay only what you spend.",
+      icon: Percent,
+      bg: "bg-purple-50",
+      color: "text-fi-purple",
+    },
+    {
+      title: "Zero charges",
+      desc: "No fees, nothing hidden.",
+      icon: ShieldCheck,
+      bg: "bg-amber-50",
+      color: "text-amber-600",
+    },
+    {
+      title: "Quickest approvals",
+      desc: "Instant eligibility check.",
+      icon: Zap,
+      bg: "bg-blue-50",
+      color: "text-blue-600",
+    },
+  ];
+
   return (
     <div className="pb-8 space-y-6">
       {/* Top Hero Banner matching screenshot 8 */}
@@ -255,97 +286,94 @@ export function HomeView() {
         </div>
       </div>
 
-      {/* Why Pay With 1Fi Cards matching screenshot 8 & 10 */}
-      <div className="px-4 space-y-3">
-        <div className="flex items-center gap-1 text-[11px] font-bold text-fi-purple uppercase tracking-wider">
+      {/* Why Pay With 1Fi: Continuous smooth moving slider in ALTERNATE direction (moving right) */}
+      <div className="space-y-3">
+        <div className="px-4 flex items-center gap-1.5 text-[11.5px] font-extrabold text-fi-purple uppercase tracking-[0.06em]">
           <div className="w-1 h-3.5 bg-fi-purple rounded-full" />
           <span>WHY PAY WITH 1FI</span>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-              <TrendingUp className="w-4 h-4" />
-            </div>
-            <div>
-              <h4 className="text-xs font-bold text-slate-900">Keep growing</h4>
-              <p className="text-[10px] text-slate-500 mt-0.5">No tax, no exit load.</p>
-            </div>
-          </div>
+        {/* Alternate Marquee moving in opposite direction (rightward) */}
+        <div className="relative overflow-hidden w-full py-1">
+          {/* Subtle edge fade masks */}
+          <div className="absolute left-0 inset-y-0 w-6 bg-gradient-to-r from-fi-bg to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 inset-y-0 w-6 bg-gradient-to-l from-fi-bg to-transparent z-10 pointer-events-none" />
 
-          <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-purple-50 text-fi-purple flex items-center justify-center shrink-0">
-              <Percent className="w-4 h-4" />
-            </div>
-            <div>
-              <h4 className="text-xs font-bold text-slate-900">0% interest</h4>
-              <p className="text-[10px] text-slate-500 mt-0.5">Repay only what you spend.</p>
-            </div>
-          </div>
-
-          <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-4 h-4" />
-            </div>
-            <div>
-              <h4 className="text-xs font-bold text-slate-900">Zero charges</h4>
-              <p className="text-[10px] text-slate-500 mt-0.5">No fees, nothing hidden.</p>
-            </div>
-          </div>
-
-          <div className="bg-white p-3.5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-              <Zap className="w-4 h-4" />
-            </div>
-            <div>
-              <h4 className="text-xs font-bold text-slate-900">Quickest approvals</h4>
-              <p className="text-[10px] text-slate-500 mt-0.5">Instant eligibility check.</p>
-            </div>
+          <div className="animate-marquee-right flex gap-3 px-3">
+            {[...whyPayFeatures, ...whyPayFeatures, ...whyPayFeatures].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white p-3.5 rounded-2xl border border-[#F0F2F9] shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex items-start gap-3 w-[210px] shrink-0 select-none hover:shadow-md transition-shadow"
+                >
+                  <div
+                    className={`w-9 h-9 rounded-xl ${item.bg} ${item.color} flex items-center justify-center shrink-0`}
+                  >
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-900 leading-tight">
+                      {item.title}
+                    </h4>
+                    <p className="text-[10px] text-slate-500 mt-1 leading-snug">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
 
-      {/* How 1Fi Works 1-2-3 matching screenshot 9 & 10 */}
+      {/* How 1Fi Works 1-2-3 matching video & screenshot 9 & 10 */}
       <div className="px-4 space-y-3">
-        <div className="flex items-center gap-1 text-[11px] font-bold text-fi-purple uppercase tracking-wider">
+        <div className="flex items-center gap-1.5 text-[11.5px] font-extrabold text-fi-purple uppercase tracking-[0.06em]">
           <div className="w-1 h-3.5 bg-fi-purple rounded-full" />
           <span>HOW 1FI WORKS</span>
         </div>
 
-        <div className="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm">
-          <div className="grid grid-cols-3 gap-2 text-center relative">
+        <div className="bg-white rounded-3xl p-5 border border-slate-100/90 shadow-sm relative">
+          {/* Horizontal Connecting dotted line between circles */}
+          <div className="absolute top-[42px] left-[20%] right-[20%] border-t-2 border-dashed border-purple-200 z-0 pointer-events-none" />
+
+          <div className="grid grid-cols-3 gap-2 text-center relative z-10">
+            {/* Step 1: Connect Your Portfolio */}
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-2xl bg-purple-100 text-fi-purple flex items-center justify-center relative shadow-sm">
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-slate-900 text-white rounded-full text-[9px] font-bold flex items-center justify-center">
+              <div className="w-13 h-13 p-3 rounded-2xl bg-gradient-to-br from-[#6C38FF] to-[#501EE6] text-white flex items-center justify-center relative shadow-md shadow-purple-500/20">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-slate-950 text-white rounded-full text-[9px] font-black flex items-center justify-center border-2 border-white">
                   1
                 </span>
-                <QrCode className="w-5 h-5" />
+                <QrCode className="w-5 h-5 text-white" />
               </div>
-              <span className="text-[10px] font-bold text-slate-800 uppercase tracking-tight mt-2">
+              <span className="text-[10px] font-bold text-slate-800 uppercase tracking-tight mt-2.5 max-w-[80px]">
                 CONNECT YOUR PORTFOLIO
               </span>
             </div>
 
+            {/* Step 2: Unlock Your Limit */}
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-2xl bg-purple-100 text-fi-purple flex items-center justify-center relative shadow-sm">
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-slate-900 text-white rounded-full text-[9px] font-bold flex items-center justify-center">
+              <div className="w-13 h-13 p-3 rounded-2xl bg-gradient-to-br from-[#6C38FF] to-[#501EE6] text-white flex items-center justify-center relative shadow-md shadow-purple-500/20">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-slate-950 text-white rounded-full text-[9px] font-black flex items-center justify-center border-2 border-white">
                   2
                 </span>
-                <Lock className="w-5 h-5" />
+                <Lock className="w-5 h-5 text-white" />
               </div>
-              <span className="text-[10px] font-bold text-slate-800 uppercase tracking-tight mt-2">
+              <span className="text-[10px] font-bold text-slate-800 uppercase tracking-tight mt-2.5 max-w-[80px]">
                 UNLOCK YOUR LIMIT
               </span>
             </div>
 
+            {/* Step 3: Shop & Pay Later */}
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-2xl bg-purple-100 text-fi-purple flex items-center justify-center relative shadow-sm">
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-slate-900 text-white rounded-full text-[9px] font-bold flex items-center justify-center">
+              <div className="w-13 h-13 p-3 rounded-2xl bg-gradient-to-br from-[#6C38FF] to-[#501EE6] text-white flex items-center justify-center relative shadow-md shadow-purple-500/20">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-slate-950 text-white rounded-full text-[9px] font-black flex items-center justify-center border-2 border-white">
                   3
                 </span>
-                <ShoppingBag className="w-5 h-5" />
+                <ShoppingBag className="w-5 h-5 text-white" />
               </div>
-              <span className="text-[10px] font-bold text-slate-800 uppercase tracking-tight mt-2">
+              <span className="text-[10px] font-bold text-slate-800 uppercase tracking-tight mt-2.5 max-w-[80px]">
                 SHOP & PAY LATER
               </span>
             </div>
@@ -353,39 +381,44 @@ export function HomeView() {
         </div>
       </div>
 
-      {/* Refer and Earn Banner matching screenshot 9 & 10 */}
+      {/* Refer and Earn Banner matching video 1 & 2 */}
       <div className="px-4">
         <div
           onClick={() => setActiveModal("refer")}
-          className="relative overflow-hidden rounded-3xl p-5 bg-gradient-to-r from-[#2A0872] via-[#4A0EBE] to-[#6C38FF] text-white shadow-md cursor-pointer group"
+          className="relative overflow-hidden rounded-[26px] p-6 bg-gradient-to-r from-[#180066] via-[#3600B3] to-[#5C24EB] text-white shadow-lg cursor-pointer group min-h-[145px] flex items-center justify-between"
         >
-          <div className="relative z-10 max-w-[65%] space-y-1.5">
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500 text-white text-[9px] font-bold uppercase">
+          {/* Subtle ambient light */}
+          <div className="absolute top-0 right-0 w-40 h-40 bg-purple-400/20 rounded-full blur-2xl pointer-events-none" />
+
+          <div className="relative z-10 max-w-[62%] space-y-2">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500 text-white text-[9.5px] font-black uppercase tracking-wide">
               <Gift className="w-3 h-3" />
               <span>INVITE</span>
             </span>
-            <h3 className="text-sm font-black text-white">
+            <h3 className="text-base font-extrabold text-white leading-tight">
               Get upto ₹1000 for every friend.
             </h3>
-            <p className="text-[10px] text-purple-100/80">
+            <p className="text-[11px] text-purple-200/90 leading-tight">
               Plus they'll also get rewards.
             </p>
           </div>
 
-          <div className="absolute top-4 right-4 transform rotate-6 text-right">
-            <div className="text-xl font-black text-white tracking-wider">
+          {/* Right Side Bold Graphic Holding */}
+          <div className="relative z-10 text-right pr-2">
+            <div className="text-2xl font-black text-white tracking-wider leading-none drop-shadow-md">
               REFER
             </div>
-            <div className="text-sm font-black text-amber-300">
+            <div className="text-base font-black text-amber-300 tracking-wide mt-0.5 leading-none">
               AND EARN
             </div>
+            <span className="text-lg inline-block transform rotate-12 mt-1">✨</span>
           </div>
         </div>
       </div>
 
-      {/* Frequently Asked Questions matching screenshot 9 & 10 */}
+      {/* Frequently Asked Questions matching video 1 & 2 */}
       <div className="px-4 space-y-3">
-        <div className="flex items-center gap-1 text-[11px] font-bold text-fi-purple uppercase tracking-wider">
+        <div className="flex items-center gap-1.5 text-[11.5px] font-extrabold text-fi-purple uppercase tracking-[0.06em]">
           <div className="w-1 h-3.5 bg-fi-purple rounded-full" />
           <span>FREQUENTLY ASKED QUESTIONS</span>
         </div>
@@ -418,9 +451,10 @@ export function HomeView() {
           })}
         </div>
 
+        {/* View all FAQs with white rectangular card background and shadow */}
         <button
           onClick={() => setActiveModal("faqs")}
-          className="w-full py-3 text-center text-xs font-bold text-fi-purple hover:underline flex items-center justify-center gap-1"
+          className="w-full bg-white border border-slate-100/90 rounded-2xl py-3.5 px-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-center gap-2 text-fi-purple font-bold text-xs hover:bg-slate-50 transition-all active:scale-[0.99]"
         >
           <span>View all FAQs</span>
           <ArrowRight className="w-3.5 h-3.5" />

@@ -3,6 +3,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { EMIPlan, Order, Product, ProductVariant, UserProfile } from "../lib/types";
 
+export type ModalType = "none" | "faqs" | "purchases" | "refer" | "location" | "productDetail" | "privacy" | "terms";
+
 interface AppContextType {
   activeBottomTab: "home" | "shop" | "dues" | "limit" | "profile";
   setActiveBottomTab: (tab: "home" | "shop" | "dues" | "limit" | "profile") => void;
@@ -16,8 +18,8 @@ interface AppContextType {
   setSelectedEMIPlan: (plan: EMIPlan | null) => void;
   isCheckoutModalOpen: boolean;
   setIsCheckoutModalOpen: (open: boolean) => void;
-  activeModal: "none" | "faqs" | "purchases" | "refer" | "location" | "productDetail";
-  setActiveModal: (modal: "none" | "faqs" | "purchases" | "refer" | "location" | "productDetail") => void;
+  activeModal: ModalType;
+  setActiveModal: (modal: ModalType) => void;
   orders: Order[];
   addOrder: (order: Order) => void;
   userProfile: UserProfile;
@@ -50,7 +52,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
   const [selectedEMIPlan, setSelectedEMIPlan] = useState<EMIPlan | null>(null);
   const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState(false);
-  const [activeModal, setActiveModal] = useState<"none" | "faqs" | "purchases" | "refer" | "location" | "productDetail">("none");
+  const [activeModal, setActiveModal] = useState<ModalType>("none");
   const [orders, setOrders] = useState<Order[]>([]);
   const [userProfile, setUserProfile] = useState<UserProfile>(initialProfile);
   const [isMobileFrame, setIsMobileFrame] = useState(true);

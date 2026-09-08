@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#FFFFFF"/>
+  <!-- Golden geometric mandala / floral emblem -->
+  <circle cx="50" cy="45" r="22" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="4 2"/>
+  <circle cx="50" cy="45" r="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <circle cx="50" cy="45" r="6" fill="#F59E0B"/>
+  <text x="50" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="800" fill="#B45309">ATELIER</text>
+</svg>

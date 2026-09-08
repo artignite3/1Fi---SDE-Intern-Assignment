@@ -15,6 +15,8 @@ import { CheckoutFlowModal } from "../marketplace/CheckoutFlowModal";
 import { SupportFAQModal } from "../profile/SupportFAQModal";
 import { ReferAndEarnModal } from "../profile/ReferAndEarnModal";
 import { PurchasesModal } from "../profile/PurchasesModal";
+import { PrivacyPolicyModal } from "../profile/PrivacyPolicyModal";
+import { TermsConditionsModal } from "../profile/TermsConditionsModal";
 import { useApp } from "@/context/AppContext";
 import { ProductVariant, EMIPlan } from "@/lib/types";
 
@@ -133,6 +135,14 @@ export function MobileShell() {
 
         {activeModal === "purchases" && (
           <PurchasesModal onClose={() => setActiveModal("none")} />
+        )}
+
+        {activeModal === "privacy" && (
+          <PrivacyPolicyModal onClose={() => setActiveModal("none")} />
+        )}
+
+        {activeModal === "terms" && (
+          <TermsConditionsModal onClose={() => setActiveModal("none")} />
         )}
       </div>
     </div>

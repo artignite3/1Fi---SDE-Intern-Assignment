@@ -58,14 +58,14 @@ export function ShopHeader() {
         </div>
       </div>
 
-      {/* Sub-Tabs Switcher matching 1Fi design */}
+      {/* Sub-Tabs Switcher matching 1Fi design (clean, slightly lighter background) */}
       <div className="px-4 -mt-4 relative z-20">
-        <div className="bg-[#EDE9FE]/85 backdrop-blur-md p-1 rounded-full flex items-center shadow-sm border border-white/90">
+        <div className="bg-[#F5F3FF]/95 backdrop-blur-md p-1 rounded-full flex items-center shadow-[0_2px_10px_rgba(0,0,0,0.05)] border border-white/95">
           <button
             onClick={() => setShopSubTab("top-brands")}
             className={`flex-1 py-2 rounded-full text-[12px] font-bold transition-all text-center relative ${
               shopSubTab === "top-brands"
-                ? "bg-white text-fi-purple shadow-sm"
+                ? "bg-white text-fi-purple shadow-[0_2px_8px_rgba(92,36,235,0.08)]"
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
@@ -79,7 +79,7 @@ export function ShopHeader() {
             onClick={() => setShopSubTab("nearby-stores")}
             className={`flex-1 py-2 rounded-full text-[12px] font-bold transition-all text-center relative ${
               shopSubTab === "nearby-stores"
-                ? "bg-white text-fi-purple shadow-sm"
+                ? "bg-white text-fi-purple shadow-[0_2px_8px_rgba(92,36,235,0.08)]"
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
@@ -94,7 +94,7 @@ export function ShopHeader() {
             className={`flex-1 py-2 rounded-full text-[12px] font-bold transition-all text-center relative flex items-center justify-center gap-1 ${
               shopSubTab === "marketplace"
                 ? "bg-fi-purple text-white shadow-fi-btn"
-                : "text-fi-purple hover:bg-white/50"
+                : "text-fi-purple hover:bg-white/60"
             }`}
           >
             <span>Marketplace</span>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#FFFFFF"/>
+  <!-- Suzuki S Logo -->
+  <path d="M72 26H38L28 39H62L38 52H28L38 65H72L82 52H48L72 39H82L72 26Z" fill="#E31837"/>
+  <text x="50" y="86" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="900" fill="#0C2340" letter-spacing="1">SUZUKI</text>
+</svg>

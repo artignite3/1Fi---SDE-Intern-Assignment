@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#FFFFFF"/>
+  <!-- Honda Wing Logo -->
+  <path d="M22 60C32 54 44 48 55 32C46 36 34 44 26 48L22 60Z" fill="#E40521"/>
+  <path d="M30 65C42 58 56 50 68 30C58 35 44 45 34 52L30 65Z" fill="#E40521"/>
+  <path d="M38 70C54 62 70 52 82 25C70 32 54 44 42 56L38 70Z" fill="#E40521"/>
+  <text x="50" y="86" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#E40521" letter-spacing="1">HONDA</text>
+</svg>

@@ -63,14 +63,14 @@ export function ProfileView() {
       title: "Privacy policy",
       subtitle: "How we handle your data",
       icon: Shield,
-      action: () => alert("1Fi Privacy Policy: Your financial information is encrypted using bank-grade 256-bit SSL encryption."),
+      action: () => setActiveModal("privacy"),
     },
     {
       id: "terms-conditions",
       title: "Terms & conditions",
       subtitle: "Rules governing your use",
       icon: FileText,
-      action: () => alert("1Fi Terms: RBI regulated lending guidelines apply."),
+      action: () => setActiveModal("terms"),
     },
   ];
 
