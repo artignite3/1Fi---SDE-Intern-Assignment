@@ -132,6 +132,11 @@ export function ProductDetailModal({
                 src={product.images[selectedImageIndex] || product.images[0]}
                 alt={product.title}
                 className="max-h-full max-w-full object-contain mix-blend-multiply transition-all duration-300"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  target.onerror = null;
+                  target.src = "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&auto=format&fit=crop&q=80";
+                }}
               />
             </div>
 
@@ -152,6 +157,11 @@ export function ProductDetailModal({
                       src={img}
                       alt="thumbnail"
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        target.onerror = null;
+                        target.src = "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=100&auto=format&fit=crop&q=80";
+                      }}
                     />
                   </button>
                 ))}

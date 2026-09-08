@@ -1,18 +1,19 @@
-# EMI API Module (`src/app/api/emi/`)
+﻿# EMI API Module (src/app/api/emi/)
 
-This directory houses the financial engine and REST API route handlers responsible for 0% No-Cost EMI calculations, tenure amortization schedules, and Mutual Fund lien collateral assessment.
-
----
-
-## Architecture Overview
-
-All endpoints in this group adhere to standard RBI NBFC lending guidelines for Mutual Fund lien pledging:
-- **Interest Rate**: 0% APR (subsidized via merchant agreements).
-- **Processing Fees**: ₹0.
-- **Collateral Ratio**: 1.3x - 1.5x of the loan principal value pledged via SEBI-registered RTAs (CAMS / KFintech).
+This directory houses route handlers responsible for financial calculations, interest waiver rules, and Mutual Fund lien pledging algorithms for 0% No-Cost EMI transactions.
 
 ---
 
-## Subdirectories & Endpoints
+## Sub-Routes
 
-- [`calculate/`](./calculate): `POST /api/emi/calculate` — Real-time EMI calculation and lien determination.
+- [calculate/](./calculate/README.md): Endpoint for dynamic calculation of monthly installments, interest discounts, tenure schedules, and required mutual fund collateral backing.
+
+---
+
+## Financial Model
+
+1. **Zero-Cost EMI**:
+   Interest is fully subsidized by participating merchant partners. The customer pays only the net product cost spread evenly over the tenure.
+
+2. **Mutual Fund Lien Collateral**:
+   Required collateral is calculated at 1.5x the principal value against approved SEBI-registered equity and hybrid mutual fund units.

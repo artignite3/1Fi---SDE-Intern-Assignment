@@ -9,12 +9,20 @@ import { ShimmerSkeletonList } from "../marketplace/ShimmerSkeleton";
 export function TopBrandsTab() {
   const [brands, setBrands] = useState<Brand[]>([]);
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 200);
+    return () => clearTimeout(handler);
+  }, [query]);
 
   useEffect(() => {
     let isMounted = true;
     setLoading(true);
-    marketplaceService.getTopBrands(query).then((data) => {
+    marketplaceService.getTopBrands(debouncedQuery).then((data) => {
       if (isMounted) {
         setBrands(data);
         setLoading(false);
@@ -23,7 +31,7 @@ export function TopBrandsTab() {
     return () => {
       isMounted = false;
     };
-  }, [query]);
+  }, [debouncedQuery]);
 
   return (
     <div className="px-4 py-4 space-y-4">

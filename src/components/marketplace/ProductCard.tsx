@@ -39,6 +39,11 @@ export function ProductCard({ product }: { product: Product }) {
             alt={product.title}
             className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
             loading="lazy"
+            onError={(e) => {
+              const target = e.currentTarget;
+              target.onerror = null;
+              target.src = "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&auto=format&fit=crop&q=80";
+            }}
           />
         </div>
 

@@ -94,6 +94,16 @@ export function MarketplaceView() {
     return () => clearInterval(timer);
   }, []);
 
+  const [debouncedSearch, setDebouncedSearch] = useState(searchQuery);
+
+  // Debounce rapid search input by 200ms
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearch(searchQuery);
+    }, 200);
+    return () => clearTimeout(handler);
+  }, [searchQuery]);
+
   // Load categories
   useEffect(() => {
     marketplaceService.getCategories().then(setCategories);
@@ -107,7 +117,7 @@ export function MarketplaceView() {
       .getProducts({
         ...filters,
         category: selectedCategory,
-        query: searchQuery,
+        query: debouncedSearch,
       })
       .then((data) => {
         if (isMounted) {
@@ -118,7 +128,7 @@ export function MarketplaceView() {
     return () => {
       isMounted = false;
     };
-  }, [selectedCategory, searchQuery, filters]);
+  }, [selectedCategory, debouncedSearch, filters]);
 
   const handleBannerClick = (productId: string) => {
     const target = products.find((p) => p.id === productId);
