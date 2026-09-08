@@ -194,6 +194,3 @@ npm start
 
 - **Candidate**: Riddhesh Dalal
 - **Email**: riddhesh_2401ct18@iitp.ac.in
-- **Phone**: +91 8982094147
-- **Submission Form**: [1Fi SDE Intern Assignment Submission](https://forms.gle/WZYqNEAJZPXonLk88)
-- **Submission Deadline**: 8th September 2026
