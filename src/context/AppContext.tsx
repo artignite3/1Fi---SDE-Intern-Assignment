@@ -46,7 +46,7 @@ const initialProfile: UserProfile = {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [activeBottomTab, setActiveBottomTab] = useState<"home" | "shop" | "dues" | "limit" | "profile">("shop");
+  const [activeBottomTab, setActiveBottomTab] = useState<"home" | "shop" | "dues" | "limit" | "profile">("home");
   const [shopSubTab, setShopSubTab] = useState<"top-brands" | "nearby-stores" | "marketplace">("marketplace");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);

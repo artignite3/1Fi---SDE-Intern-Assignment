@@ -11,10 +11,6 @@ import {
   Tv,
   Plane,
   Gem,
-  ChevronRight,
-  TrendingUp,
-  Tag,
-  ArrowRight,
 } from "lucide-react";
 import { Category, Product } from "@/lib/types";
 import { marketplaceService, ProductFilterParams } from "@/lib/api/marketplaceService";

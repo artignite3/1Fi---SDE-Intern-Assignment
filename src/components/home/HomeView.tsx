@@ -69,6 +69,15 @@ export function HomeView() {
       gradient: "from-[#2D0B20] via-[#481234] to-[#3B0764]",
       accent: "text-yellow-300",
     },
+    {
+      id: 6,
+      tag: "ELECTRONICS MEGA DEAL",
+      title: "Reliance Digital Tech Fest at 0% EMI",
+      badge: "✓ Upto 18m no cost EMI",
+      image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80",
+      gradient: "from-[#0F172A] via-[#1E293B] to-[#334155]",
+      accent: "text-emerald-300",
+    },
   ];
 
   const [activeOfferIdx, setActiveOfferIdx] = useState(0);
